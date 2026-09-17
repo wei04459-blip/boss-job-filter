@@ -1,0 +1,13 @@
+upstream/
+outputs/
+**/.venv/
+**/node_modules/
+**/__pycache__/
+.DS_Store
+**/.runtime.json
+**/*.pyc
+*.zip
+.release-staging/
+validation-config.json
+验收记录.md
+BOSS岗位定向筛选Skill_实施方案.md

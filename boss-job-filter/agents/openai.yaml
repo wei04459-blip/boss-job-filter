@@ -1,0 +1,6 @@
+interface:
+  display_name: "BOSS 岗位定向筛选"
+  short_description: "按城市与岗位筛选真实招聘信息，核对任职条件并整理成中文表格"
+  default_prompt: "使用 $boss-job-filter，按我指定的城市、岗位和条件筛选 BOSS 直聘岗位，并生成 Excel 表格。"
+policy:
+  allow_implicit_invocation: true
