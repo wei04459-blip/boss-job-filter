@@ -49,7 +49,7 @@ python3 install.py --destination "/your/skill/directory/boss-job-filter"
 ## 支持范围与验证
 
 - 面向本机可见 Chrome，代码包含 macOS、Windows、Linux 的路径处理。当前真实浏览器验证来自 macOS；Windows/Linux 的真实登录、权限和 BOSS 页面尚待对应设备验收。
-- Python 依赖、空结果/中断/缺失信息、薪资交集、年龄待确认、正文复核指纹、超链接和导出均有自动检查。跨系统 CI 在推送后运行，不能提前视为已通过。
+- Python 依赖、空结果/中断/缺失信息、薪资交集、年龄待确认、正文复核指纹、超链接和导出均有自动检查。Windows、macOS、Linux × Python 3.10/3.12 的六组 CI 已通过；真实浏览器登录仍须对应设备验收。
 - 新机器上首次登录和平台限制无法承诺无人值守。采集不足 150 条、达到页数上限、详情中断、未复核均明确记录，不冒充完整市场覆盖。
 - 安装与导出不依赖作者的缓存、软链接、Chrome 登录态或历史输出。依赖下载失败可在相同安装目录重跑 bootstrap。
 

@@ -36,7 +36,16 @@
 
 ## 尚未验证与不可自动替代的步骤
 
-- 公开仓库已创建为 https://github.com/wei04459-blip/boss-job-filter 。以下记录为发布前的本机验收；公开 URL 安装与跨系统 CI 的结果将在发布验证后补充。
-- Windows/Linux 已提供路径处理和 CI 配置；CI 要等实际推送才会运行，真实浏览器流程还需对应设备验收。不能把 macOS 隔离目录冒充其他操作系统。
+- 公开仓库的下载与安装验收已完成，见下方发布记录。
+- Windows/Linux 的自动检查已通过；真实浏览器登录、页面采集和系统权限仍需对应设备验收。不能把 CI 或 macOS 隔离目录冒充其他系统上的真实 BOSS 流程。
 - 新设备首次 BOSS 登录、验证码、账号恢复和系统管理员授权不能由安装脚本替代。
 - 平台页面和限制可能变化，不能保证每次都收满 150 条；达到页数上限或受阻时保留实际结果并说明状态。
+
+## 公开仓库发布验证
+
+- 仓库：[wei04459-blip/boss-job-filter](https://github.com/wei04459-blip/boss-job-filter)，公开，默认分支 main。
+- 初始源码提交：`691ebf383b656450d9132716e21c52478538cef2`。
+- 无 GitHub 登录凭据下载主分支 ZIP 返回 HTTP 200；32 个源码/文档文件与本地发布清单逐文件一致。
+- 从这份公开下载包在新的中文空格目录执行 install.py，创建独立虚拟环境和安装依赖成功；doctor 的环境、输出写入和本地 Chrome 连接检查通过。没有复制账号登录态。
+- [六组 GitHub Actions 检查](https://github.com/wei04459-blip/boss-job-filter/actions/runs/35205587569)全部成功：Windows、macOS、Ubuntu，分别覆盖 Python 3.10 和 3.12。
+- CI 验证规则、通用 Excel 导出、资源完整性和安装边界；不在 CI 登录 BOSS，不把自动检查视作三种系统的真实网页采集验收。
